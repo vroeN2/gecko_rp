@@ -1,0 +1,29 @@
+{
+  "name": "gecko_rp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vroeN2/gecko_rp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vroeN2/gecko_rp/issues"
+  },
+  "homepage": "https://github.com/vroeN2/gecko_rp#readme",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "gul": "^1.0.0",
+    "gulp-purgecss": "^5.0.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.57.1"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2"
+  }
+}

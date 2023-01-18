@@ -1,0 +1,41 @@
+@use 'sass:math';
+
+.card {
+  display: block;
+  padding: $base-padding;
+  border: $base-border-thickness * 2 solid $primary;
+  box-shadow: $base-box-shadow;
+  border-radius: $base-border-radius;
+  position: relative;
+  transition: 0.15s all cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  .card-title {
+    font-size: $base-font-size;
+    padding-bottom: $base-padding;
+    font-weight: bold;
+  }
+  .card-body {
+    font-size: $base-font-size;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .arrow {
+    display: none;
+    transition: 0.15s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  &:hover {
+    border: $base-border-thickness * 2 solid $yellow;
+    
+    .arrow {
+      display: block;
+      position: absolute;
+      top: $base-padding * 2;
+      right: $base-padding * 2;
+      font-size: $base-font-size;
+    }
+  }
+}
