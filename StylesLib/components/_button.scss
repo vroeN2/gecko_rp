@@ -34,7 +34,7 @@
 
     &:hover {
       @if $key == 'white' {
-        color: black;
+        color: $primary;
       }
       background-color: lighten($val, 30);
     }
