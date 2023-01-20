@@ -18,10 +18,70 @@
 .background {
   pointer-events: none;
   position: absolute;
-  top: 0;
+  filter: opacity(0.5);
+  z-index: 0;
+}
+
+.arrow {
+  margin-left: 0.5rem;;
+  transition: 0.15s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform: rotate(180deg);
+}
+
+.content__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $base-padding $base-padding * 8;
+  z-index: 3;
+}
+
+.content--left {
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+}
+
+.content--right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 3;
+}
+
+.header {
+  margin-top: $base-padding * 2;
+  line-height: 115%;
+  letter-spacing: -4%;
+  font-size: 5.3125rem;
+  color: white;
+  max-width: 70%;;
+  font-weight: 700;
+}
+
+.description {
+  margin-top: $base-padding;
+  line-height: 150%;
+  letter-spacing: -1%;
+  font-size: 1rem;
+  color: white;
+  max-width: 55%;;
+  font-weight: 500;
+}
+
+.highlight {
+  border-radius: $base-border-radius;
+  background: rgba(255,255,255,0.2);
+}
+
+.footer--wrapper {
+  position: fixed;
   left: 0;
-  right: 0;
   bottom: 0;
-  filter: opacity(0.75);
-  z-index: 1;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  max-width: 100%;
+  padding: 0 $base-padding * 8;
+  z-index: 3;
 }

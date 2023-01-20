@@ -157,6 +157,26 @@ $utilities: (
       "xl": $font-size-xl,
       "xxl": $font-size-xxl
     )
+  ),
+  "width": (
+    "prefix": "w",
+    "values": (
+      "100": 100px,
+      "200": 200px,
+      "300": 300px,
+      "400": 400px,
+      "500": 500px,
+    )
+  ),
+  "transform": (
+    "prefix": 'trans',
+    "values": (
+      "xs": scale(0.5),
+      "sm": scale(0.75),
+      "md": scale(1),
+      "lg": scale(1.25),
+      "xl": scale(1.5),
+    )
   )
 );
 
