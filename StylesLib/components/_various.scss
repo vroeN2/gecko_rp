@@ -1,10 +1,10 @@
 @mixin hov($border-color: none, $shadow-color: transparent) {
   transition: 0.15s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  z-index: 5;
 
   &:hover {
     border: $base-border-thickness * 2 solid $border-color;
-    box-shadow: 0px 0px 70px -30px $shadow-color;
-    // filter: drop-shadow(0px 0px 70px $shadow-color);
+    box-shadow: 0px 0px 70px -10px $shadow-color;
   }
 }
 
@@ -14,11 +14,12 @@
 
 @each $key, $val in $colors {
   .hov-border-#{$key} {
-    @include hov($val, transparent)
+    @include hov($val, transparent);
   }
 
   .hov-shadow-#{$key} {
-    @include hov(none, $val)
+    @include hov(none, $val);
+    z-index: 10;
   }
 }
 

@@ -4,6 +4,7 @@ $secondary: #1ac886;
 $error: #d32752;
 $info: #f6c31c;
 $yellow: #FFCE1F;
+$blue: #1780FF;
 
 // color palette
 $colors: (
@@ -11,13 +12,13 @@ $colors: (
   "secondary": $secondary,
   "error": $error,
   "info": $info,
-  "blue": #1919e6,
+  "blue": $blue,
   "red": #e61919,
   "yellow": $yellow,
   "green": #19e635,
   "orange": #ffa600,
   "purple": #9900ff,
-  "gray": #808080,
+  "gray": #596573,
   "black": black,
   "white": white,
 );
@@ -36,7 +37,8 @@ $base-border-radius-xs: 5px;
 $base-box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
 
 // font sizes
-$base-font-size: 1rem;
+$base-font-size: 1.5rem;
+$font-size-xs: $base-font-size * 0.5;
 $font-size-sm: $base-font-size * 0.75;
 $font-size-lg: $base-font-size * 1.5;
 $font-size-xl: $base-font-size * 2;
