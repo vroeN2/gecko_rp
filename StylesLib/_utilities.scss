@@ -148,6 +148,16 @@ $utilities: (
       "i-b": inline-block
     )
   ),
+  "align": (
+  "prefix": "align-items",
+  "values": (
+      "c": center,
+      "fe": flex-end,
+      "fs": flex-start,
+      "b": baseline,
+      "s": stretch,
+    )
+  ),
   "font-size": (
     "prefix": "font",
     "values": (
