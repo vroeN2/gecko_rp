@@ -27,3 +27,13 @@ menuItems.forEach((singleItem) => {
     linkArrow.style.transform = "rotate(180deg)";
   });
 });
+
+const cards = document.querySelectorAll("div.card-blue");
+let maxHeight = 0;
+cards.forEach((card) => {
+  if (card.clientHeight > maxHeight) maxHeight = card.clientHeight;
+});
+
+cards.forEach((card) => {
+  card.style.height = `${maxHeight}px`;
+});
