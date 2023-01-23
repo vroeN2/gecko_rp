@@ -1,21 +1,672 @@
-!<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+
+    <title>Gecko Dynamics</title>
   </head>
   <body>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">
-        You are using an <strong>outdated</strong> browser. Please
-        <a href="#">upgrade your browser</a> to improve your experience.
-      </p>
-    <![endif]-->
+    <div class="main__wrapper">
+      <nav class="main__navigation">
+        <div class="logo">
+          <img src="./assets/logo.svg" alt="company logo" />
+        </div>
 
-    <script src="./script/script.js" async defer></script>
+        <ul style="display: flex">
+          <li>
+            <a href="#" class="btn-text-white expandable"
+              >Company<i class="fa-solid fa-chevron-up arrow"></i>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="btn-text-white expandable"
+              >Services<i class="fa-solid fa-chevron-up arrow"></i
+            ></a>
+          </li>
+
+          <li>
+            <a href="#" class="btn-text-white expandable"
+              >Expertise<i class="fa-solid fa-chevron-up arrow"></i
+            ></a>
+          </li>
+
+          <li><a href="#" class="btn-text-white">Our Clients</a></li>
+
+          <li><a href="#" class="btn-text-white">Case Studies</a></li>
+
+          <li><a href="#" class="btn-text-white">Blog</a></li>
+
+          <li>
+            <a href="#" class="btn-outlined-white-transparent">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="expanded_menu hidden">
+        <div class="row gap-2">
+          <a
+            class="btn-text-reverse-primary display-f col-12-md col-6-xl text-primary font-sm"
+          >
+            <img
+              src="./assets/submenu01.svg"
+              alt="Web Development icon"
+              class="mr-2"
+            />
+
+            <p>Web Development</p>
+          </a>
+          <a
+            class="btn-text-reverse-primary display-f col-12-md col-6-xl text-primary font-sm"
+          >
+            <img
+              src="./assets/submenu02.svg"
+              alt="Audit & IT Consulting icon"
+              class="mr-2"
+            />
+
+            <p>Audit & IT Consulting</p>
+          </a>
+        </div>
+
+        <div class="row gap-2">
+          <a
+            class="btn-text-reverse-primary display-f col-12-md col-6-xl text-primary font-sm"
+          >
+            <img
+              src="./assets/submenu03.svg"
+              alt="Custom Development icon"
+              class="mr-2"
+            />
+
+            <p>Custom Development</p>
+          </a>
+          <a
+            class="btn-text-reverse-primary display-f col-12-md col-6-xl text-primary font-sm"
+          >
+            <img
+              src="./assets/submenu04.svg"
+              alt="Mobile Development icon"
+              class="mr-2"
+            />
+
+            <p>Mobile Development</p>
+          </a>
+        </div>
+        <div class="row gap-2">
+          <a
+            class="btn-text-reverse-primary display-f col-12-md col-6-xl text-primary font-sm"
+          >
+            <img
+              src="./assets/submenu05.svg"
+              alt="Team Augmentation icon"
+              class="mr-2"
+            />
+
+            <p>Team Augmentation</p>
+          </a>
+          <a
+            class="btn-text-reverse-primary display-f col-12-md col-6-xl text-primary font-sm"
+          >
+            <img
+              src="./assets/submenu06.svg"
+              alt="Product Design icon"
+              class="mr-2"
+            />
+
+            <p>Product Design</p>
+          </a>
+        </div>
+      </div>
+
+      <main class="content__wrapper">
+        <div class="content__homepage mt-3 mb-3 pb-5">
+          <div class="content--left">
+            <h1 class="header">Be one step ahead</h1>
+
+            <h2 class="description">
+              Work with experts in Web & Custom Software Development, delivering
+              scalable systems and web applications since 2002
+            </h2>
+
+            <a href="#" class="btn-fancy-yellow mt-3 mb-3 w-100 text-primary"
+              >Get in touch</a
+            >
+
+            <div class="highlight p-1 text-white w-400">
+              ⭐ Best Software Development Partner in 2019
+            </div>
+          </div>
+
+          <div class="content--right hov-pointer">
+            <div class="image--wrapper">
+              <img
+                class="main-image"
+                src="./assets/our_works-main.png"
+                alt="smiling person happy to work in Gecko Dynamics"
+              />
+
+              <img
+                class="main-image-border"
+                src="./assets/our_works-border.svg"
+                alt="extra border for good looking"
+              />
+
+              <img
+                class="project-preview preview-1"
+                src="./assets/our_works-mini1.png"
+                alt="small preview of a project"
+              />
+
+              <img
+                class="project-preview preview-2"
+                src="./assets/our_works-mini2.png"
+                alt="another project preview"
+              />
+
+              <img
+                class="footprints"
+                src="./assets/gecko_hands.svg"
+                alt="gecko footprints"
+              />
+            </div>
+
+            <div class="our-works display-f mt-1">
+              <a href="#" class="scaling-btn text-white font-md mr-1"
+                >See our works</a
+              >
+
+              <img src="./assets/arrow_right.svg" alt="see our works" />
+            </div>
+          </div>
+        </div>
+
+        <div class="cookies__wrapper bg-primary text-white" id="cookies">
+          <h3 class="font-xs">
+            We use cookies to improve your browsing experience on our website.
+            By browsing our website, you consent to our use of cookies and other
+            tracking technologies.
+          </h3>
+
+          <div
+            class="btn-outlined-white-transparent trans-sm ml-2"
+            id="cookies__agree"
+          >
+            Agree
+          </div>
+        </div>
+
+        <div class="content__help pt-4 pb-5 mb-2 bg-white">
+          <div class="help__title text-primary">How we can help you</div>
+          <div class="row gap-2 justify-center">
+            <div class="col-12-xs col-5-sm col-3-xl"></div>
+
+            <div class="col-12-xs col-5-sm col-3-xl"></div>
+
+            <div class="col-12-xs col-5-sm col-3-xl">
+              <div
+                class="card-blue text-primary bg-white p-3 hov-border-yellow hov-pointer"
+              >
+                <div class="more">
+                  <i class="fa-solid fa-arrow-right font-lg text-primary"></i>
+                </div>
+                <h3 class="card-title font-lg">Web Development</h3>
+                <p class="card-body text-gray font-md">
+                  From MVPs to world-changing digital products
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12-xs col-5-sm col-3-xl">
+              <div
+                class="card-blue text-primary bg-white p-3 hov-border-yellow hov-pointer"
+              >
+                <div class="more">
+                  <i class="fa-solid fa-arrow-right font-lg text-primary"></i>
+                </div>
+                <h3 class="card-title font-lg">Custom Development</h3>
+                <p class="card-body text-gray font-md">
+                  Solutions tailored directly to your industry
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12-xs col-5-sm col-3-xl">
+              <div
+                class="card-blue text-primary bg-white p-3 hov-border-yellow hov-pointer"
+              >
+                <div class="more">
+                  <i class="fa-solid fa-arrow-right font-lg text-primary"></i>
+                </div>
+                <h3 class="card-title font-lg">Team Augmentation</h3>
+                <p class="card-body text-gray font-md">
+                  Hire our developers to work in your team on-site or remotely
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12-xs col-5-sm col-3-xl">
+              <div
+                class="card-blue text-primary bg-white p-3 hov-border-yellow hov-pointer"
+              >
+                <div class="more">
+                  <i class="fa-solid fa-arrow-right font-lg text-primary"></i>
+                </div>
+                <h3 class="card-title font-lg">Audit & IT Consulting</h3>
+                <p class="card-body text-gray font-md">
+                  Analysis of the specific nature of your project.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12-xs col-5-sm col-3-xl">
+              <div
+                class="card-blue text-primary bg-white p-3 hov-border-yellow hov-pointer"
+              >
+                <div class="more">
+                  <i class="fa-solid fa-arrow-right font-lg text-primary"></i>
+                </div>
+                <h3 class="card-title font-lg">Mobile Development</h3>
+                <p class="card-body text-gray font-md">
+                  Amazing mobile apps for iOS and Android
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12-xs col-5-sm col-3-xl">
+              <div
+                class="card-blue text-primary bg-white p-3 hov-border-yellow hov-pointer"
+              >
+                <div class="more">
+                  <i class="fa-solid fa-arrow-right font-lg text-primary"></i>
+                </div>
+                <h3 class="card-title font-lg">Product Design</h3>
+                <p class="card-body text-gray font-md">
+                  Intuitive, friendly & user-engaging design
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="ornament"></div>
+        </div>
+
+        <div class="content__numbers">
+          <div class="numbers--left text-white">
+            <h3 class="numbers--title mb-2">Gecko Dynamics in numbers</h3>
+
+            <h3 class="numbers--description mb-4">
+              Describing everything we achieved since 2002 would be enough for a
+              book. We value your time, so let the numbers briefly summarize it
+            </h3>
+
+            <div class="numbers--marks">
+              <h4 class="numbers-mark">
+                <span>50+</span><br />
+                Skillful talents
+              </h4>
+
+              <h4 class="numbers-mark">
+                <span>80+</span><br />
+                Happy clients
+              </h4>
+
+              <h4 class="numbers-mark">
+                <span>15+</span><br />
+                Years on the market
+              </h4>
+            </div>
+          </div>
+
+          <div class="numbers--right p-5 text-white">
+            <h3 class="numbers-achievement mb-3">
+              <span>150+</span><br />
+              Success stories
+            </h3>
+            <a
+              href="#"
+              class="btn-fancy-yellow mt-3 mb-3 p-2 text-primary font-sm"
+              id="see_success_stories"
+              >See success stories</a
+            >
+          </div>
+        </div>
+
+        <div class="benefits__wrapper pt-5 pb-5">
+          <h3 class="text-primary font-xl w-300">How does it benefit you</h3>
+
+          <div class="circles">
+            <div class="circle-0"></div>
+            <div class="circle-1"></div>
+            <div class="circle-2"></div>
+            <div class="circle-3"></div>
+            <div class="circle-4"></div>
+            <div class="circle-5"></div>
+          </div>
+        </div>
+
+        <div class="process__wrapper text-primary bg-white pt-4">
+          <h3 class="font-lg mb-4">The Process</h3>
+
+          <div class="graph__wrapper">
+            <hr class="graph--line" />
+
+            <div
+              class="graph--icon font-lg hov-border-yellow hov-shadow-yellow hov-pointer"
+            >
+              <img src="./assets/magnifying.svg" alt="magnifying glass icon" />
+
+              <div class="description text-primary font-sm">
+                <span>01</span>
+
+                <p>Analysis</p>
+
+                <p class="extended--description">
+                  We discuss your project in details, including each aspect it
+                  touches
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="graph--icon font-lg hov-border-yellow hov-shadow-yellow hov-pointer"
+            >
+              <img src="./assets/lightbulb.svg" alt="lightbulb icon" />
+
+              <div class="description text-primary font-sm">
+                <span>02</span>
+
+                <p>Solutions</p>
+
+                <p class="extended--description">
+                  We suggest the most optimal tech stack and offer the best
+                  approach
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="graph--icon font-lg hov-border-yellow hov-shadow-yellow hov-pointer"
+            >
+              <img src="./assets/report.svg" alt="report icon" />
+
+              <div class="description text-primary font-sm last-description">
+                <span>03</span>
+
+                <p>Report</p>
+
+                <p class="extended--description">
+                  The report covers all outcomes of the process and analysis
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer--wrapper text-white pt-5 pl-5 pr-5 pb-2">
+        <div class="footer--top">
+          <div class="footer--top__left">
+            <div class="footer--top__email mb-2">
+              <p class="font-lg text-white">
+                Feel free to contact us at
+                <span class="text-yellow">hello@geckodynamics.com</span>
+              </p>
+            </div>
+
+            <div class="footer--top__pagemap mb-5">
+              <div class="pagemap--category">
+                <span class="pl-0">Company</span>
+                <a href="#" class="btn-text-white font-xs pl-0 pb-0"
+                  >About Us</a
+                >
+                <a href="#" class="btn-text-white font-xs pl-0 pb-0"
+                  >Oslo team</a
+                >
+                <a href="#" class="btn-text-white font-xs pl-0 pb-0"
+                  >Vancouver team</a
+                >
+                <a href="#" class="btn-text-white font-xs pl-0 pb-0"
+                  >San Francisco team</a
+                >
+                <a href="#" class="btn-text-white font-xs pl-0 pb-0"
+                  >London team</a
+                >
+                <a href="#" class="btn-text-white font-xs pl-0 pb-0">Blog</a>
+              </div>
+
+              <div class="pagemap--category">
+                <span class="pl-0">Our work</span>
+                <a href="#" class="btn-text-white font-xs pl-0 pb-0"
+                  >Portfolio</a
+                >
+                <a href="#" class="btn-text-white font-xs pl-0 pb-0">Clients</a>
+                <a href="#" class="btn-text-white font-xs pl-0 pb-0"
+                  >Services</a
+                >
+                <a href="#" class="btn-text-white font-xs pl-0 pb-0"
+                  >Industries</a
+                >
+              </div>
+
+              <div class="pagemap--category">
+                <span class="pl-0">Expertise</span>
+                <a href="#" class="btn-text-white font-xs pl-0 pb-0"
+                  >Technologies</a
+                >
+                <a href="#" class="btn-text-white font-xs pl-0 pb-0"
+                  >Java Development</a
+                >
+                <a href="#" class="btn-text-white font-xs pl-0 pb-0"
+                  >.NET Development</a
+                >
+                <a href="#" class="btn-text-white font-xs pl-0 pb-0"
+                  >Angular Development</a
+                >
+                <a href="#" class="btn-text-white font-xs pl-0 pb-0"
+                  >React.js Development</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="footer--top__right">
+            <p class="title font-lg text-white mb-1">Our offices</p>
+
+            <div>
+              <div class="row gap-2 justify-center">
+                <div class="country-contact col-12-md col-6-xl text-white">
+                  <div class="display-f mb-1">
+                    <span class="mr-1">
+                      <img src="./assets/flag_canada.svg" alt="canadian flag" />
+                    </span>
+
+                    <p class="font-sm">Canada</p>
+                  </div>
+
+                  <hr class="contact-divider mb-1" />
+
+                  <div class="address_details display-f mt-1 mb-1">
+                    <span class="text-white o-80 font-xs mr-1">
+                      <img src="./assets/pin_icon.svg" alt="canadian address" />
+                    </span>
+
+                    <p class="contact_desc">
+                      422 Richards St, Suite 170 Vancouver, BC, V6B 2Z4
+                    </p>
+                  </div>
+
+                  <div class="display-f mt-1 mb-1">
+                    <span class="text-white o-80 font-xs mr-1">
+                      <img
+                        src="./assets/phone_icon.svg"
+                        alt="canadian phone number"
+                      />
+                    </span>
+
+                    <p class="contact_desc">+1 778 881 4161</p>
+                  </div>
+                </div>
+
+                <div class="country-contact col-12-md col-6-xl text-white">
+                  <div class="display-f mb-1">
+                    <span class="mr-1">
+                      <img src="./assets/flag_usa.svg" alt="usa flag" />
+                    </span>
+
+                    <p class="font-sm">United States</p>
+                  </div>
+
+                  <hr class="contact-divider mb-1" />
+
+                  <div class="address_details display-f mt-1 mb-1">
+                    <span class="text-white o-80 font-xs mr-1">
+                      <img src="./assets/pin_icon.svg" alt="usa address" />
+                    </span>
+
+                    <p class="contact_desc">
+                      3041 Mission St # 2012, San Francisco CA 94110
+                    </p>
+                  </div>
+
+                  <div class="display-f mt-1 mb-1">
+                    <span class="text-white o-80 font-xs mr-1">
+                      <img
+                        src="./assets/phone_icon.svg"
+                        alt="usa phone number"
+                      />
+                    </span>
+
+                    <p class="contact_desc">+1 778 881 4161</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row gap-2 justify-center">
+                <div class="country-contact col-12-md col-6-xl text-white">
+                  <div class="display-f mb-1">
+                    <span class="mr-1">
+                      <img src="./assets/flag_poland.svg" alt="polish flag" />
+                    </span>
+
+                    <p class="font-sm">Poland</p>
+                  </div>
+
+                  <hr class="contact-divider mb-1" />
+
+                  <div class="address_details display-f mt-1 mb-1">
+                    <span class="text-white o-80 font-xs mr-1">
+                      <img src="./assets/pin_icon.svg" alt="polish address" />
+                    </span>
+
+                    <p class="contact_desc">
+                      Wadowicka 8I 30-415 Cracow, Poland
+                    </p>
+                  </div>
+
+                  <div class="display-f mt-1 mb-1">
+                    <span class="text-white o-80 font-xs mr-1">
+                      <img
+                        src="./assets/phone_icon.svg"
+                        alt="polish phone number"
+                      />
+                    </span>
+
+                    <p class="contact_desc">+48 513 752 444</p>
+                  </div>
+                </div>
+
+                <div class="country-contact col-12-md col-6-xl text-white">
+                  <div class="display-f mb-1">
+                    <span class="mr-1">
+                      <img src="./assets/flag_uk.svg" alt="uk flag" />
+                    </span>
+
+                    <p class="font-sm">United Kingdom</p>
+                  </div>
+
+                  <hr class="contact-divider mb-1" />
+
+                  <div class="address_details display-f mt-1 mb-1">
+                    <span class="text-white o-80 font-xs mr-1">
+                      <img src="./assets/pin_icon.svg" alt="uk address" />
+                    </span>
+
+                    <p class="contact_desc">
+                      30 St Mary Axe Level 28 EC3A8EP, London, UK
+                    </p>
+                  </div>
+
+                  <div class="display-f mt-1 mb-1">
+                    <span class="text-white o-80 font-xs mr-1">
+                      <img
+                        src="./assets/phone_icon.svg"
+                        alt="uk phone number"
+                      />
+                    </span>
+
+                    <p class="contact_desc">+44 2033 184 036</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer--bottom">
+          <div class="footer--bottom__left">
+            <img
+              src="./assets/logo_goodfirms.png"
+              alt="GoodFirms logo"
+              class="footer__logo"
+            />
+
+            <img
+              src="./assets/logo_clutch.png"
+              alt="Clutch logo"
+              class="footer__logo"
+            />
+
+            <h4 class="footer__rating">
+              <p>
+                ⭐⭐⭐⭐⭐ Gecko Dynamics is rated 4.9 on
+                <a href="#" class="text__link">Clutch</a>
+              </p>
+            </h4>
+          </div>
+
+          <div class="footer--bottom__right">
+            <div class="footer__socials">
+              <div class="footer__socials--icon font-lg hov-pointer">
+                <i class="fa-brands fa-linkedin"></i>
+              </div>
+
+              <div class="footer__socials--icon font-lg hov-pointer">
+                <i class="fa-brands fa-square-facebook"></i>
+              </div>
+
+              <div class="footer__socials--icon font-lg hov-pointer">
+                <i class="fa-brands fa-skype"></i>
+              </div>
+            </div>
+
+            <div class="footer__copyright">
+              <p class="font-xs">Copyright © 2021 Gecko Dynamics</p>
+
+              <p class="font-xs">Privacy Policy</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="./scripts/script.js"></script>
   </body>
 </html>

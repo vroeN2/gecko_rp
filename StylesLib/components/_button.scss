@@ -1,0 +1,96 @@
+@mixin btn($bg-color: #e2e2e2) {
+  text-decoration: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  padding: $base-padding $base-padding * 2;
+  border-radius: $base-border-radius-xs;
+  background-color: $bg-color;
+  transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+
+.btn {
+  @include btn;
+}
+
+@each $key, $val in $colors {
+  .btn-#{$key} {
+    @include btn($val);
+    &:hover {
+      background-color: lighten($val, 5);
+    }
+  }
+  .btn-outlined-#{$key} {
+    @include btn(#fff);
+    border: $base-border-thickness solid $val;
+    &:hover {
+      background-color: $val;
+    }
+  }
+  .btn-outlined-#{$key}-transparent {
+    @include btn(transparent);
+    border: $base-border-thickness solid $val;
+    color: $val;
+
+    &:hover {
+      @if $key == 'white' {
+        color: $primary;
+      }
+      background-color: lighten($val, 30);
+    }
+  }
+  .btn-complement-#{$key} {
+    @include btn($val);
+    color: light-comp($val);
+    &:hover {
+      color: $val;
+      background-color: light-comp($val);
+    }
+  }
+
+  .btn-text-#{$key} {
+    @include btn($val);
+    border: 0;
+    opacity: 0.5;
+    color: $val;
+    background: transparent;
+
+    &:hover {
+      opacity: 1;
+  }
+}
+
+.btn-text-reverse-#{$key} {
+  @include btn($val);
+  justify-content: flex-start;
+  border: 0;
+  color: $val;
+  background: transparent;
+  filter: opacity(1);
+
+  &:hover {
+    cursor: pointer;
+    filter: opacity(0.7);
+}
+}
+
+  .btn-fancy-#{$key} {
+    @include btn(#fff);
+    border-top-left-radius: 0;
+    border-top-right-radius: $base-border-radius;
+    border-bottom-left-radius: $base-border-radius;
+    border-bottom-right-radius: 0;
+    background-color: $val;
+    transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+    &:hover {
+      @if $key == 'white' {
+        background-color: lighten(black, 20);
+      } @else {
+        background-color: lighten($val, 30);
+        }    
+      }
+  }
+}
