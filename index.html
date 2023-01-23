@@ -21,17 +21,17 @@
 
         <ul style="display: flex">
           <li>
-            <a href="#" class="btn-text-white"
+            <a href="#" class="btn-text-white expandable"
               >Company <i class="fa-solid fa-chevron-up arrow"></i
             ></a>
           </li>
           <li>
-            <a href="#" class="btn-text-white"
+            <a href="#" class="btn-text-white expandable"
               >Services <i class="fa-solid fa-chevron-up arrow"></i
             ></a>
           </li>
           <li>
-            <a href="#" class="btn-text-white"
+            <a href="#" class="btn-text-white expandable"
               >Expertise <i class="fa-solid fa-chevron-up arrow"></i
             ></a>
           </li>
@@ -43,10 +43,6 @@
           </li>
         </ul>
       </nav>
-
-      <div class="background">
-        <img src="./assets/bg_waves.svg" alt="background effect" />
-      </div>
 
       <main class="content__wrapper">
         <div class="content__homepage mt-3 mb-3 pb-5">
@@ -67,9 +63,45 @@
             </div>
           </div>
 
-          <div class="content--right">
+          <div class="content--right hov-pointer">
             <div class="image--wrapper">
-              <img src="./assets/our_works.png" alt="see our works" />
+              <img
+                class="main-image"
+                src="./assets/our_works-main.png"
+                alt="smiling person happy to work in Gecko Dynamics"
+              />
+
+              <img
+                class="main-image-border"
+                src="./assets/our_works-border.svg"
+                alt="extra border for good looking"
+              />
+
+              <img
+                class="project-preview preview-1"
+                src="./assets/our_works-mini1.png"
+                alt="small preview of a project"
+              />
+
+              <img
+                class="project-preview preview-2"
+                src="./assets/our_works-mini2.png"
+                alt="another project preview"
+              />
+
+              <img
+                class="footprints"
+                src="./assets/gecko_hands.svg"
+                alt="gecko footprints"
+              />
+            </div>
+
+            <div class="our-works display-f mt-1">
+              <a href="#" class="scaling-btn text-white font-md mr-1"
+                >See our works</a
+              >
+
+              <img src="./assets/arrow_right.svg" alt="see our works" />
             </div>
           </div>
         </div>
@@ -364,7 +396,7 @@
           </div>
 
           <div class="footer--top__right">
-            <p class="font-lg text-white mb-1">Our offices</p>
+            <p class="title font-lg text-white mb-1">Our offices</p>
 
             <div>
               <div class="row gap-2 justify-center">

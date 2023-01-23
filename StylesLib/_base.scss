@@ -54,24 +54,20 @@ img {
   z-index: 3;
 }
 
-.background {
-  pointer-events: none;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  filter: opacity(0.5);
-  z-index: 0;
+.expandable {
+  position: relative;
 }
 
 .arrow {
   margin-left: 0.5rem;;
-  transition: 0.15s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
   transform: rotate(180deg);
 }
 
 .content__wrapper {
   padding: $base-padding $base-padding * 8;
   z-index: -3;
+  background: url(/assets/bg_waves.svg) no-repeat;
 }
 
 .content__homepage {
@@ -93,6 +89,87 @@ img {
   flex-direction: column;
   align-items: flex-end;
   z-index: 3;
+  transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    
+  &:hover .our-works {
+    transform: scale(1.1)
+  }
+
+  &:hover .preview-1 {
+    transform: translateX(-10%);
+  } 
+  
+  &:hover .preview-2 {
+    transform: translateX(10%);
+  }
+  
+  &:hover .main-image {
+    transform: translate(2%, 2%);
+  }
+  
+  &:hover .main-image-border {
+    transform: translate(-2%, -2%);
+  }
+  
+  &:hover .footprints {
+    transform: scale(1.5)
+  }
+}
+
+.image--wrapper {
+  @include flex;
+  flex-direction: column;
+  position: relative;
+  transform: scale(0.9);
+}
+
+.main-image {
+  z-index: 1;
+  transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.main-image-border {
+    transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    width: 100%;
+    position: absolute;
+    top: -4%;
+    left: -6%;
+    z-index: 0;
+}
+
+.project-preview {
+  position: absolute;
+  width: 50%;
+  z-index: 2;
+  transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.preview-1 {
+  top: 50%;
+  left: -20%;
+}
+
+.preview-2 {
+  bottom: -5%;
+  right: -15%;
+}
+
+.footprints {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+  transform: scale(1.3);
+  transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.our-works {
+  margin-left: auto; 
+  margin-right: 0;
+
+  &:hover {
+    transform: scale(1.1)
+  }
 }
 
 .header {
@@ -148,7 +225,7 @@ img {
   max-width: 100%;
   padding: 0 $base-padding * 8;
   z-index: 100;
-  transition: 0.15s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .ornament {
@@ -159,7 +236,7 @@ img {
   border-bottom-right-radius: 10rem;
   background-color: transparent;
   position: absolute;
-  top: 0;
+  top: $base-padding * 2;
   left: -$base-padding * 4;
   z-index: -1;
 }
@@ -169,7 +246,12 @@ img {
   justify-content: space-between;
   position: relative;
   box-sizing: border-box;
-  padding: $base-padding * 8 0;
+  margin-left: -$base-padding * 8;
+  margin-right: -$base-padding * 8;
+  padding-left: $base-padding * 8;
+  padding-right: $base-padding * 8;
+  background: url(/assets/bg_waves2.svg) no-repeat;
+  background-size: cover;
 }
 
 .numbers--left {
@@ -182,9 +264,6 @@ img {
   font-size: $base-font-size * 3;
 }
 
-.numbers--description {
-}
-
 .numbers--marks {
   @include flex;
   justify-content: space-between;
@@ -192,7 +271,6 @@ img {
 }
 
 .numbers-mark {
-  // width: 30%;
   @include flex;
   flex-direction: column;
   
@@ -401,6 +479,10 @@ img {
   @include flex;
   flex-direction: column;
   width: 40%;
+}
+
+.footer--top__email, .title{
+  font-weight: 700;
 }
 
 .footer--top__pagemap {

@@ -8,7 +8,7 @@
   padding: $base-padding $base-padding * 2;
   border-radius: $base-border-radius-xs;
   background-color: $bg-color;
-  transition: 0.15s all cubic-bezier(0.075, 0.82, 0.165, 1)
+  transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1)
 }
 
 .btn {
@@ -68,7 +68,7 @@
     border-bottom-left-radius: $base-border-radius;
     border-bottom-right-radius: 0;
     background-color: $val;
-    transition: 0.15s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
     
     &:hover {
       @if $key == 'white' {
