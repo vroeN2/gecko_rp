@@ -1,41 +1,42 @@
 @use 'sass:math';
 
-.card {
+@mixin card($border-color: $primary) {
+  box-sizing: border-box;
   display: block;
-  padding: $base-padding;
-  border: $base-border-thickness * 2 solid $primary;
+  padding: $base-padding * 2 $base-padding * 4;
+  border: $base-border-thickness * 2 solid $border-color;
   box-shadow: $base-box-shadow;
   border-radius: $base-border-radius;
   position: relative;
-  transition: 0.15s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  z-index: 3;
+  transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
 
-  .card-title {
-    font-size: $base-font-size;
-    padding-bottom: $base-padding;
-    font-weight: bold;
-  }
-  .card-body {
-    font-size: $base-font-size;
+.card {
+  @include card;
+}
 
-    a {
-      text-decoration: underline;
+@each $key, $val in $colors {
+  .card-#{$key} {
+    @include card($val);
+
+    & .card-title {
+      padding-bottom: $base-padding;
+      font-weight: bold;
     }
-  }
 
-  .arrow {
-    display: none;
-    transition: 0.15s all cubic-bezier(0.075, 0.82, 0.165, 1);
-  }
+    & .more {
+      opacity: 0;
+      display: none;
+      transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
 
-  &:hover {
-    border: $base-border-thickness * 2 solid $yellow;
-    
-    .arrow {
-      display: block;
+    &:hover .more {
+      opacity: 1;
+      display: inline-block;
       position: absolute;
       top: $base-padding * 2;
       right: $base-padding * 2;
-      font-size: $base-font-size;
+      }
     }
-  }
 }

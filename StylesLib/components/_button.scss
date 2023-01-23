@@ -1,12 +1,14 @@
 @mixin btn($bg-color: #e2e2e2) {
   text-decoration: none;
   cursor: pointer;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 0;
   padding: $base-padding $base-padding * 2;
   border-radius: $base-border-radius-xs;
   background-color: $bg-color;
-  transition: 0.15s all cubic-bezier(0.075, 0.82, 0.165, 1)
+  transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1)
 }
 
 .btn {
@@ -34,7 +36,7 @@
 
     &:hover {
       @if $key == 'white' {
-        color: black;
+        color: $primary;
       }
       background-color: lighten($val, 30);
     }
@@ -50,14 +52,14 @@
   .btn-text-#{$key} {
     @include btn($val);
     border: 0;
-    opacity: 0.7;
+    opacity: 0.5;
     color: $val;
     background: transparent;
 
     &:hover {
       opacity: 1;
-    }
   }
+}
 
   .btn-fancy-#{$key} {
     @include btn(#fff);
@@ -66,14 +68,10 @@
     border-bottom-left-radius: $base-border-radius;
     border-bottom-right-radius: 0;
     background-color: $val;
-    transition: 0.15s all cubic-bezier(0.075, 0.82, 0.165, 1);
-    @if $key == 'black' {
-      color: white;
-    }
+    transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
     
     &:hover {
       @if $key == 'white' {
-        color: black;
         background-color: lighten(black, 20);
       } @else {
         background-color: lighten($val, 30);
@@ -81,5 +79,3 @@
       }
   }
 }
-
-
