@@ -47,11 +47,35 @@ img {
 }
 
 .main__navigation {
-  padding: $base-padding $base-padding * 8;
   @include flex;
+  padding: $base-padding $base-padding * 8;
   justify-content: space-between;
   align-items: center;
   z-index: 3;
+}
+
+.expanded_menu {
+  position: absolute;
+  top: $base-padding * 6;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  background-color: white;
+  border-radius: $base-border-radius;
+  padding: $base-padding $base-padding * 2;
+  box-sizing: border-box;
+  z-index: 5;
+  white-space: nowrap;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.visible {
+  display: block;
+  opacity: 1;
 }
 
 .expandable {
